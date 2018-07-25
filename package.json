@@ -1,0 +1,19 @@
+{
+  "name": "say_trol",
+  "version": "1.0.0",
+  "description": "Trol with a simple script",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^2.16.0",
+    "shelljs": "^0.5.3"
+  },
+  "keywords": [
+    "trol",
+    "ironhack"
+  ],
+  "author": "Giorgio Grassini",
+  "license": "ISC"
+}
