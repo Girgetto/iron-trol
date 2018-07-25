@@ -1,4 +1,4 @@
-#iron-trol
+# iron-trol
 
 Troll someone with this script
 
@@ -11,7 +11,7 @@ $ npm install -g iron-trol
 ## How to use
 
 ````
-Usage: trolol [command]
+Usage: trol [command]
 
 Commands:
     say-somethings|say [words] [timer]  The computer star to speak with the words at the time you set, if you don't set a word it will be error, and if you don't set a timer it will be 1 second. 

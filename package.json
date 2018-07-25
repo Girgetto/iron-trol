@@ -1,7 +1,7 @@
 {
-  "name": "say_trol",
+  "name": "iron-trol",
   "version": "1.0.0",
-  "description": "Trol with a simple script",
+  "description": "Trol your friends",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
