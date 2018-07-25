@@ -1,24 +1,21 @@
 words = $1
 timer = $2
-platform='unknown'
-unamestr=`uname`
-
-if [[ "$unamestr" == 'Linux' ]]; then
-   platform='linux'
-elif [[ "$unamestr" == 'darwin' ]]; then
-   platform='darwin'
-fi
+mac=$3
+linux=$4
 
 while true; do
-if [[ $platform == 'linux' ]]; then
+if [ $linux ]; then
    # Set volume linux
    echo $1|espeak
    amixer -D pulse sset Master 100%
-elif [[ $platform == 'darwin' ]]; then
+fi
+if [ $mac ]; then
    # Set volume Mac
+   echo 'entra'
    osascript -e "set Volume 10"
    say $1
 fi
+
 
 echo $1
 sleep $2

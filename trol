@@ -1,25 +1,42 @@
 #!/usr/bin/env node
-require('shelljs/global');
-const program = require('commander');
+require("shelljs/global");
+const program = require("commander");
 const currentPath = __dirname;
 
-program
-    .version(require('./package.json').version);
+program.version(require("./package.json").version);
 
 program
-.command('say-somethings')
-.alias('say')
-.arguments('<words> <timer>')
-.description('Say somethings how many times you want')
-.action(function (words,timer) {
-    console.log(words,timer)
-    if(words===undefined)words = 'error';
-    if(timer===undefined)timer = 1;
+  .command("say-somethings")
+  .alias("say")
+  .arguments("<words> <timer>")
+  .description("Say somethings how many times you want")
+  .action(function(words, timer) {
+      let mac = false;
+      let linux = false;
+    if (/^darwin/.test(process.platform)) {
+       mac = true;
+       linux = false;
+    } else {
+        linux = true;
+        mac = false;
+    }
+    if (words === undefined) words = "error";
+    if (timer === undefined) timer = 1;
 
-    exec('bash ' + currentPath + '/src/trol.sh ' + words + ' '+timer);
-});
+    exec(
+      "bash " +
+        currentPath +
+        "/src/trol.sh " +
+        words +
+        " " +
+        timer +
+        " " +
+        mac +
+        " " +
+        linux
+    );
+  });
 
 program.parse(process.argv);
 
-if (!program.args.length)
-    program.help();
+if (!program.args.length) program.help();
