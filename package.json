@@ -14,6 +14,9 @@
     "trol",
     "ironhack"
   ],
+  "bin": {
+    "trol": "./trol"
+  },
   "author": "Giorgio Grassini",
   "license": "ISC"
 }
