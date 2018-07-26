@@ -11,15 +11,11 @@ program
   .arguments("<words> <timer>")
   .description("Say somethings how many times you want")
   .action(function(words, timer) {
-      let mac = false;
-      let linux = false;
-    if (/^darwin/.test(process.platform)) {
-       mac = true;
-       linux = false;
-    } else {
-        linux = true;
-        mac = false;
-    }
+    let mac = false;
+    let linux = false;
+
+    /^darwin/.test(process.platform) ? (mac = true) : (linux = false);
+
     if (words === undefined) words = "error";
     if (timer === undefined) timer = 1;
 

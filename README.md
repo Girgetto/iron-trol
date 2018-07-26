@@ -24,6 +24,6 @@ Commands:
 Command
 
 ```
-$ trol error-your-computer-will-explode 2
+$ trol say error-your-computer-will-explode 2
 ```
 will start say 'error your computer will explode' each 2 seconds
