@@ -4,7 +4,7 @@
   "description": "Trol your friends",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "trol say error-your-computer-will-explode 2"
   },
   "dependencies": {
     "commander": "^2.16.0",
